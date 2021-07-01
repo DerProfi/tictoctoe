@@ -3,7 +3,7 @@
     Powered by
     <img alt="Vue logo" src="./assets/logo.png" class="logo"/>
     <div class="container">
-      <field v-for="field in fields" :key="field.id"/>
+      <field v-for="field in fields" :key="field.id" @click="change"/>
     </div>
     <button>Restart</button>
    
@@ -53,6 +53,11 @@ export default {
       ]
     }
   },
+  methods: {
+    change() {
+      alert('test')
+    }
+  }
 };
 </script>
 
