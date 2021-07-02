@@ -20,37 +20,7 @@ export default {
   },
   data() {
     return {
-      fields: [
-        {
-          id: 1,
-          cross: false,
-          circle: false
-        },
-        {id: 2,
-          cross: false,
-          circle: false},
-        {id: 3,
-          cross: false,
-          circle: false},
-        {id: 4,
-          cross: false,
-          circle: false},
-        {id: 5,
-          cross: false,
-          circle: false},
-        {id: 6,
-          cross: false,
-          circle: false},
-        {id: 7,
-          cross: false,
-          circle: false},
-        {id: 8,
-          cross: false,
-          circle: false},
-        {id: 9,
-          cross: false,
-          circle: false}
-      ]
+      fields: Array(9).fill(null)
     }
   },
   methods: {
