@@ -1,19 +1,20 @@
 <template>
   <div> 
     <div class="field" v-on:click='click'>
-        <p class="cross">X</p>
-        <p class="circle">O</p>
+        {{value}}
     </div>  
 </div>
 </template>
 
 <script>
 export default {
+    props: ['value'],
     methods: {
         click(){
             this.$emit('click')
         }
-    }
+    },
+
 }
 </script>
 
@@ -29,16 +30,6 @@ export default {
 }
 .field:hover{
     cursor: pointer;
-}
-
-.cross{
-    display: none;
-    font-size: 5rem;
-}
-
-.circle{
-     display: none;
-    font-size: 5rem;
 }
 
 </style>

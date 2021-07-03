@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="container">
-      <field v-for="(field, index) in fields" :key="index" v-on:click="change"/>
-    </div>
+      <field v-for="(field, index) in fields" :key="index" :value="field" v-on:click="change(index)"/>
+  </div>
   </div>
 </template>
 
@@ -11,17 +11,25 @@
 
 export default {
     name: "board",
+    props: {
+
+    },
     components: {
         field
     },
   data(){
       return{
+          player:"X",
           fields: Array(9).fill(null)
       }
     },
     methods: {
-    change() {
-      alert('test')
+    change(index) {
+      if (this.fields[index]){
+        return
+      }
+      this.$set(this.fields, index, this.player);
+        this.player = this.player === "X" ? "O": "X";
         }
     }
 };

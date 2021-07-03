@@ -2,6 +2,7 @@
   <div id="app">
     Powered by
     <img alt="Vue logo" src="./assets/logo.png" class="logo"/>
+    <options/>
     <board/>
     <button>Restart</button>
   </div>
@@ -9,15 +10,16 @@
 
 <script>
 import board from './components/Board.vue';
+import Options from './components/Options.vue';
 
 export default {
   name: "App",
   components: {
-    board
+    board,
+    Options,
   },
   data() {
     return {
-      player: "X",
     }
   },
 };
