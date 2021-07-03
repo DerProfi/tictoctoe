@@ -11,10 +11,7 @@
 
 export default {
     name: "board",
-    props: {
-
-    },
-    components: {
+    components: { 
         field
     },
   data(){
