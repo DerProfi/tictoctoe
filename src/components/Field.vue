@@ -1,6 +1,6 @@
 <template>
   <div> 
-    <div class="field">
+    <div class="field" v-on:click='click'>
         <p class="cross">X</p>
         <p class="circle">O</p>
     </div>  
@@ -9,7 +9,11 @@
 
 <script>
 export default {
-
+    methods: {
+        click(){
+            this.$emit('click')
+        }
+    }
 }
 </script>
 
@@ -36,8 +40,5 @@ export default {
      display: none;
     font-size: 5rem;
 }
-
-
-
 
 </style>
