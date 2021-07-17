@@ -4,7 +4,6 @@
     <img alt="Vue logo" src="./assets/logo.png" class="logo"/>
     <options/>
     <board/>
-    <button>Restart</button>
   </div>
 </template>
 

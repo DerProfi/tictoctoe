@@ -1,9 +1,10 @@
 <template>
   <div>
-    <status :winner="winner.player" :player="player"/>
+    <status :winner="winner.player" :player="player" :isDrawGame="DrawGame"/>
     <div class="container">
       <field v-for="(field, index) in fields" :key="index" :value="field" v-on:click="change(index)"/>
   </div>
+  <button @click="restart">Restart</button>
   </div>
 </template>
 
@@ -23,6 +24,7 @@ export default {
           player:"X",
           fields: Array(9).fill(null),
           isDrawGame: false,
+          key: 0,
       }
     },
     methods: {
@@ -32,11 +34,18 @@ export default {
       }
       this.$set(this.fields, index, this.player);
         this.player = this.player === "X" ? "O": "X";
-        }
+        },
+    restart(){
+      this.player = "X";
+      this.fields = Array(9).fill(null);
+      }
     },
     computed: {
       winner(){
-        return getWinner(this.fields)
+        return getWinner(this.fields);
+      },
+      DrawGame(){
+        return this.fields.filter(field => !field).length === 0;
       }
     }
 };

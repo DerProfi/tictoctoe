@@ -9,7 +9,7 @@
 <script>
 export default {
   props: {
-      playerOne: String,
+      winner: String,
       player: String,
       isDrawGame: Boolean
   }
