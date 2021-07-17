@@ -1,9 +1,12 @@
 <template>
     <div class="option">
-        <label for="player1">Player 1: </label>
-        <input type="text" id="player1" placeholder="Player1" v-model="playerOne">
-        <label for="player2">Player 2: </label>
-        <input type="text" id="player2" placeholder="Player2" v-model="playerTwo">
+        <form>
+          <label for="player1">Player 1: </label>
+          <input type="text" id="player1" placeholder="Player1" v-model="playerOne">
+          <label for="player2">Player 2: </label>
+          <input type="text" id="player2" placeholder="Player2" v-model="playerTwo">
+          <button @click="save">Save</button>
+        </form>
     </div>
 </template>
 
@@ -15,6 +18,20 @@ export default {
             playerTwo: "",
         }
     },
+    mounted() {
+        if (localStorage.playerOne) {
+            this.playerOne = localStorage.playerOne;
+        }
+        if (localStorage.playerTwo) {
+            this.playerTwo = localStorage.playerTwo;
+        }
+    },
+    methods: {
+        save() {
+            localStorage.playerOne = this.playerOne;
+            localStorage.playerTwo = this.playerTwo;
+        }
+    }
 }
 </script>
 
