@@ -4,7 +4,7 @@
           <label for="player1">Player 1: </label>
           <input type="text" id="player1" placeholder="Player1" v-model="playerOne">
           <label for="player2">Player 2: </label>
-          <input type="text" id="player2" placeholder="Player2" v-model="playerTwo">
+          <input type="text" id="player2" placeholder="Optional" v-model="playerTwo">
           <button @click="save">Save</button>
         </form>
     </div>
