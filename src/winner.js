@@ -1,20 +1,20 @@
 const winningCombinations = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],  
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6],
 ];
 
-export default function(fields) {
-for (let positions of winningCombinations){
+export default function (fields) {
+  for (let positions of winningCombinations) {
     const [a, b, c] = positions;
     if (fields[a] && fields[a] === fields[b] && fields[a] === fields[c]) {
-        return {player: fields[a], positions};
+      return { player: fields[a], positions };
     }
   }
-  return { player: null, position: [] }; 
+  return { player: null, position: [] };
 }
