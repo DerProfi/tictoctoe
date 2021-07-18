@@ -2,19 +2,16 @@
   <div id="app">
     Powered by
     <img alt="Vue logo" src="./assets/logo.png" class="logo"/>
-    <options/>
-    <board/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import board from './components/Board.vue';
-import Options from './components/Options.vue';
+
 export default {
   name: "App",
   components: {
-    board,
-    Options,
+   
   },
   data() {
     return {
