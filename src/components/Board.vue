@@ -43,7 +43,17 @@ export default {
       }
       this.$set(this.fields, index, this.player);
       this.player = this.player === "X" ? "O" : "X";
+      // computerMove();
     },
+    //Currently not working
+    // computerMove(){
+    //   var notChosenFields= [];
+    //   this.fields.forEach(function(field){
+    //     if(field = null){
+    //       notChosenFields.push(field);
+    //     }
+    //   })
+    // },
     restart() {
       this.player = "X";
       this.fields = Array(9).fill(null);

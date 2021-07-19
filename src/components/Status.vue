@@ -30,6 +30,10 @@ export default {
     }
   },
   methods: {
+    //Currently not working
+    //   currentlyPlaying(){
+    //   this.currentPlayer = this.currentPlayer === this.playerOne ? this.playerTwo : this.playerOne;
+    // }
   }
 };
 </script>
