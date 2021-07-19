@@ -1,5 +1,6 @@
 <template>
   <div>
+    <options/>
     <status :winner="winner.player" :player="player" :isDrawGame="DrawGame" />
     <div class="container">
       <field
@@ -17,12 +18,15 @@
 import field from "./Field.vue";
 import status from "./Status.vue";
 import getWinner from "../winner";
+import Options from "./Options.vue"
+
 
 export default {
   name: "board",
   components: {
     field,
     status,
+    Options,
   },
   data() {
     return {

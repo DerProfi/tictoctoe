@@ -12,9 +12,10 @@
       <input
         type="text"
         id="player2"
-        placeholder="Optional"
+        placeholder="Player2"
         v-model="playerTwo"
       />
+      <br>
       <button @click="save">Save</button>
     </form>
   </div>
@@ -46,6 +47,14 @@ export default {
 </script>
 
 <style>
+input{
+  margin-left: 5px;
+}
+
+label{
+  margin-left: 15px;
+}
+
 .option {
   margin-top: 20px;
 }
