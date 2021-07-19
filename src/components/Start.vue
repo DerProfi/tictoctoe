@@ -5,9 +5,9 @@
       <br>
       <span>How would you like to play?</span>
       <br>
-      <button>Against AI</button>
+      <button>PvE</button>
       <label for="singlePlayer"></label>
-      <router-link to="/board" tag="button">Against a friend</router-link>
+      <router-link to="/board" tag="button">PvP</router-link>
       
   </div>
 </template>
